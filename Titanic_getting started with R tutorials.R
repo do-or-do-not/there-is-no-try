@@ -60,4 +60,15 @@ test$Survived[test$Sex == 'female'] <- 1
 
 submit_womanfirst <- data.frame(PassengerId = test$PassengerId, Survived = test$Survived)
 
-write.csv(submit_nosurvivors, file = "womanfirst.csv", row.names = FALSE)
+write.csv(submit_womanfirst, file = "womanfirst.csv", row.names = FALSE)
+
+#### Looking at other variables ####
+
+prop.table(table(train$Age, train$Survived),1)
+prop.table(table(train$Pclass, train$Survived),1)
+
+# How can you set combinations of attributes equal to some value i.e. 1 or 0?
+
+
+
+
